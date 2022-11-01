@@ -16,4 +16,4 @@ O futebol americano é extremamente popular nos Estados Unidos. Nos anos 90, ult
 
 ## Autor
 
-- [@](https://www.github.com/octokatherine)alanaquinoslv
+- [@](https://www.github.com/alanaquinoslv)
