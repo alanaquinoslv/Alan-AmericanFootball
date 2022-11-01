@@ -10,10 +10,11 @@ O futebol americano é extremamente popular nos Estados Unidos. Nos anos 90, ult
 
 ## Stack utilizada
 
-**Front-end:**`<img align="center" alt="Agreen-HTML" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg"><img align="center" alt="Agreen-CSS" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain.svg">`
+**Front-end:** <img align="center" alt="Alan-HTML" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain.svg"> <img align="center" alt="Alan-CSS" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain.svg">
 
-**Back-end:** `<img align="center" alt="Agreen-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">` `<img align="center" alt="Agreen-NodeJS" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-plain.svg">`
+
+**Back-end:** <img align="center" alt="Alan-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> <img align="center" alt="Alan-NodeJS" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-plain.svg">
 
 ## Autor
 
-- [@](https://www.github.com/alanaquinoslv)
+[@alanaquinoslv](https://github.com/alanaquinoslv)
