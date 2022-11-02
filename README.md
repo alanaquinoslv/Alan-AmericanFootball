@@ -1,4 +1,4 @@
-![Logo](assets/logo-ligas.png)
+![Logo](assets/ligas.png)
 
 ## 🏈 Alan | American Football 🏈
 

@@ -1,0 +1,104 @@
+/* imagem fundo */
+.banner {
+    background-image: url("assets/fortaleza.png");
+    height: 551px;
+    margin: 0px 83px 0px 83px;
+    color: #fff;
+    display: flex;
+    position: relative;
+}
+
+.caixa_formulario {
+    background: white;
+    width: 400px;
+    height: 370px;
+    color: #d50a0a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: .8;
+}
+
+.caixa_formulario h1 {
+    font-size: 30px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.formulario button {
+    margin-top: 10px;
+    background: #d50a0a;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 120px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    color: #fff;
+    background-color: #880707;
+    transition: .5s;
+}
+
+.formulario input {
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #013369;
+}
+
+.formulario img {
+    width: 16px;
+    height: 16px;
+    margin: 0px 200px 0px 170px;
+    top: 60px;
+    cursor: pointer;
+}
+
+.formulario span {
+    font-size: 20px;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.formulario a {
+    font-size: 20px;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.spanSeta {
+    position: absolute;
+    top: 1px;
+    right: 330px;
+    font-size: 60px;
+    color: #000;
+    text-decoration: none;
+}
+
+.spanSeta:hover {
+    color: #0f8b2e;
+    transition: .8s;
+}
+
+.formulario input:focus {
+    border-bottom: 2px solid #d50a0a;
+    transition: 1s;
+}
+
+.formulario input::placeholder {
+    color: #000;
+}

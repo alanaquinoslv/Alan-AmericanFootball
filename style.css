@@ -1,0 +1,146 @@
+/* Começo do cabeçalho */
+body {
+    margin: 0;
+    background: #013369;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    border-bottom: 3px solid #d50a0a;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.header .container a {
+    margin-left: 15px;
+}
+
+
+/* ligas-navbar */
+.header .container .imagens-nav {
+    justify-content: center;
+    margin-left: 200px;
+}
+
+.header ul #aqui {
+    font-weight: 1000;
+    color: #fff;
+}
+
+/* lista */
+ul {
+    color: #d50a0a;
+}
+
+/* ancoras */
+a {
+    color: #d50a0a;
+    text-decoration: none;
+}
+
+/* mudança ao passar mouse */
+.header a:hover {
+    color: #fff;
+    transition: .5s;
+}
+
+.titulo {
+    color: #fff;
+    width: fit-content;
+    font-weight: 400;
+    margin-left: 250px;
+}
+
+.header .container img {
+    width: 50px;
+    height: 50px;
+    margin-top: 13px;
+}
+
+.navBar {
+    width: 300px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* Fim do cabeçalho */
+
+/* Começo do Banner */
+
+/* .banner {
+    background-image: url("assets/2128537.jpg");
+    height: 500px;
+    color: #fff;
+    display: flex;
+} */
+
+.banner .container p span {
+    font-weight: 1000;
+}
+
+.banner .container {
+    font-size: 36px;
+    justify-content: center;
+}
+
+.banner .container p {
+    width: 30%;
+}
+
+/* Fim do banner */
+
+/* Começo do Social */
+.social {
+    background-color: beige;
+    display: flex;
+}
+
+.box img {
+    width: 170px;
+}
+
+.social .container .boxes {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.box {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social p {
+    text-align: center;
+}
+
+/* Final do Social */
+
+/* Começo do Footer */
+
+.footer {
+    background-color: #013369;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    width: 100%;
+}
+
+.footer .container {
+    justify-content: center;
+}
