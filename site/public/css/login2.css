@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    background-image: url(../assets/fortaleza.png);
+    background-image: url(../assets2/fortaleza.png);
     /* ajuste da imagem */
     background-size: cover;
     background-position: center;
@@ -96,7 +96,7 @@ input:hover {
     display: flex;
     order: 2;
     flex-grow: 2;
-    background-image: url(../assets/fortaleza.png);
+    background-image: url(../assets2/fortaleza.png);
     background-size: cover;
     background-position: center;
     color: #fff;
