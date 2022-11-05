@@ -15,6 +15,7 @@
     <div class="container">
         <div class="cadastro">
             <div class="header">
+                <a href="./index.html" class="span_seta">&larr;</a>
                 <h1>Cadastro</h1>
             </div>
             <div class="main">
@@ -24,7 +25,8 @@
                     <span>E-mail:</span> <br> <input type="text" placeholder="seu@email.com" id="email_input">
                     <br>
                     <span>Senha:</span> <br> <input type="password" placeholder="**********" id="senha_input">
-                    <span>Confirmação de senha:</span> <br> <input type="password" placeholder="**********" id="confirmacao_senha_input">
+                    <span>Confirmação de senha:</span> <br> <input type="password" placeholder="**********"
+                        id="confirmacao_senha_input">
                     <br>
                     <button>Cadastrar</button>
                 </form>
@@ -89,7 +91,7 @@
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
-                
+
                 limparFormulario();
                 finalizarAguardar();
             } else {

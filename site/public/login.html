@@ -15,9 +15,11 @@
     <div class="container">
         <div class="login">
             <div class="header">
+                <a href="./index.html" class="span_seta">&larr;</a>
                 <h1>Login</h1>
             </div>
             <div class="main">
+                <!-- caixa formulario -->
                 <form>
                     <span>E-mail:</span> <br> <input type="text" placeholder="seu@email.com" id="email_input">
                     <br>
@@ -26,15 +28,20 @@
                     <a href="https://support.google.com/accounts/answer/7682439?hl=pt-BR">Esqueci minha senha</a>
                     <br>
                     <button onclick="entrar()">Entrar</button>
-
-                    <div id="div_aguardar" class="loading-div">
-                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <br>
+                    <div class="cadastro">
+                        <span>Não tem uma conta?<a href="cadastro.html"> Cadastre-se</a></span>
                     </div>
+
+                    <!-- <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div> -->
 
                     <div id="div_erros_login"></div>
                 </form>
             </div>
         </div>
+        <!-- caixa imagem -->
         <div class="img">
             <span>
                 <h1>Bem vindo!</h1>
@@ -119,4 +126,3 @@
     }
 
 </script>
-

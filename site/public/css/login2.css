@@ -32,7 +32,7 @@ body {
 }
 
 .header h1 {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 30px;
     color: #fff;
     font-size: 35px;
@@ -44,17 +44,14 @@ button {
     width: 80%;
     height: 35px;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 7px;
+    margin-bottom: 5px;
     padding-left: 10px;
     box-sizing: border-box;
     border-radius: 3px;
     outline: none;
     border: 1px solid #52a0f3;
     color: #013369;
-}
-
-.main input {
-    margin-bottom: 5px;
 }
 
 .main span {
@@ -74,7 +71,7 @@ button {
 .main button:hover,
 input:hover {
     box-shadow: 3px 3px 3px #005ec2;
-    transition: 0.1s;
+    transition: .3s ease;
 }
 
 .main button:hover {
@@ -89,6 +86,11 @@ input:hover {
     text-align: right;
     margin: 10px 32px;
     color: #fff;
+}
+
+/* link cadastro */
+.cadastro a {
+    text-align: center;
 }
 
 /* box img */
@@ -118,4 +120,13 @@ input:hover {
 .img span p {
     font-size: 20px;
     text-shadow: 10px 0px 10px #d50a0a;
+}
+
+/* seta de voltar */
+.span_seta {
+    margin-top: 30px;
+    margin-right: 240px;
+	font-size: 32px;
+	color: #ffffff;
+	text-decoration: none;
 }
