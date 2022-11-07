@@ -34,6 +34,12 @@ header {
   text-shadow: 0 0 10px gray;
   font-size: 2rem;
   letter-spacing: 3px;
+  transition: color .3s ease;
+}
+
+.logo:hover {
+  color: #d50a0a;
+  text-shadow: 0 0 10px black;
 }
 
 /* navbar */
@@ -44,7 +50,7 @@ nav ul {
 }
 
 nav a {
-  margin: 0 17px;
+  margin: 0 19px;
   transition: color .3s ease;
 }
 
@@ -68,7 +74,7 @@ nav a:hover {
 }
 
 #menu a {
-  padding: 3px 3px;
+  padding: 7px 9px;
   float: left;
   text-transform: left;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -115,7 +121,7 @@ nav a:hover {
 
 .banner .container h4 {
   color: black;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 300;
@@ -123,29 +129,13 @@ nav a:hover {
 }
 
 .banner .container h1 {
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 400;
   color: black;
   text-transform: capitalize;
-  margin: 10px;
-  letter-spacing: 2px;
+  margin: 10px 0 32px 0;
+  letter-spacing: 3px;
   text-shadow: 0 0 10px gray;
-}
-
-/* contato */
-.banner .container a {
-  color: black;
-  text-shadow: 0 0 10px gray;
-  font-size: 18px;
-  font-weight: 100;
-  text-transform: capitalize;
-  transition: color .3s ease;
-}
-
-.banner .container a:hover {
-  color: white;
-  font-size: 22px;
-  text-shadow: 0 0 10px whitesmoke;
 }
 
 /* formatacao botao */

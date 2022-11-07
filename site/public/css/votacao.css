@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: azure;
+}
+
+.poll {
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffff;
+    border-radius: 25px;
+    box-shadow: -2px -2px #000040,
+                -2px 2px #000040;
+}
+
+.poll .question {
+    padding: 20px;
+    color: #111;
+    border-bottom: 1px solid #eee;
+}
+
+.poll .answers {
+    padding: 20px;
+}
+
+.poll .answers .answer {
+    
+}
