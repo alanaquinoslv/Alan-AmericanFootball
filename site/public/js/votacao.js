@@ -1,4 +1,4 @@
-let poll = {
+var poll = {
     question: "Qual o escudo mais bonito da conferência americana?",
     answers: [
         "Baltimore Ravens", "Buffalo Bills", "Cincinanati Bengals", "Cleveland Browns", "Denver Broncos", "Houston Texans", "Indianapolis Colts", "Jacksonville Jaguars", "Kansas City Chiefs", "Las Vegas Raiders", "Los Angeles Chargers", "Miami Dolphins", "New England Patriots", "New York Jets", "Pittsburgh Steelers", "Tennessee Titans"
@@ -8,10 +8,13 @@ let poll = {
     selectedAnswer: -1
 };
 
-let pollDOM = {
-    question:document.querySelector(".poll .question"),
-    answers:document.querySelector(".poll .answers")
+var pollDOM = {
+    question: poll.question,
+    answers: poll.answers
 };
+
+console.log(pollDOM);
+
 
 pollDOM.question.innerText = poll.question;
 pollDOM.answers.innerHTML = poll.answers.map(function (answer, i) {

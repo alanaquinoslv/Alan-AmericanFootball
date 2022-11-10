@@ -5,102 +5,60 @@
 }
 
 body {
+    height: 100vh;
+    width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    background-image: linear-gradient(to top, #013369, #d50a0a);
-    color: #000;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffff;
+    background: url(../assets2/b3146766e0cb15a980230cc3fe23b171.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    /* width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    min-height: 100vh;
-}
+    justify-content: center;
+    text-align: center; */
 
-.qa_box {
-    width: 500px;
-    padding: 20px;
-    min-height: 100px;
-    background-color: #fff;
-    /* box-shadow: 0 0 5px 3px #ffff; */
-    border-radius: 20px;
-}
-
-.qa_header {
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
-    margin: -20px -20px 0;
-    border-radius: 15px 15px 0 0;
-    font-size: 20px;
-}
-
-.qa_set {
-    display: none;
-}
-
-.qa_set .active {
-    display: block;
-}
-
-.qa_set h4 {
-    margin: 0 0 15px;
-    font-size: 20px;
-}
-
-.qa_ans_row {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.qa_ans_row input {
-    opacity: 0;
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    cursor: pointer;
+    width: 400px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-radius: 25px;
 }
 
-.qa_ans_row span {
-    display: block;
-    padding: 8px 15px;
-    background-color: #bad0c9;
-    border-radius: 15px;
-    transition: all 0.3s ease-out;
+.question {
+    font-weight: 600;
+    margin-top: 30px;
+    text-shadow: 0 0 10px gray;
 }
 
-.qa_ans_row:hover span {
-    background-color: #9ab5ac;
+.answers {
+    margin-top: 10px;
+    text-shadow: 0 0 10px gray;
 }
 
-.qa_ans_row input:checked+span {
-    background-color: #f93c3c;
-}
-
-.qa_ans_row input [valid]:checked+span {
-    background-color: green;
-    color: #ffff;
-}
-
-.qa_footer {
-    padding: 10px 0 0;
-    text-align: right;
-}
-
-.botao1 {
-    display: inline-block;
-    padding: 8px 20px;
-    background-color: rgb(0, 0, 0);
+#submit {
+    font-size: 20px;
+    background-color: #013369;
     color: #fff;
-    border-radius: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    margin-top: 20px;
+    margin-left: 110px;
+    transition: opacity .4s ease;
+    text-shadow: 0 0 10px white;
 }
 
-.botao1:hover {
-    background-color: rgb(43, 41, 41);
+#submit:hover {
+    background-color: #012953;
+    opacity: .7;
 }
