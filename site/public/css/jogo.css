@@ -1,0 +1,398 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 0 0 10px gray;
+	text-transform: uppercase;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1329px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 10px;
+	background-color: black;
+}
+
+.logo {
+	text-transform: uppercase;
+	text-shadow: 0 0 10px gray;
+	padding: 15px 30px;
+	font-size: 2rem;
+	letter-spacing: 3px;
+	transition: color .3s ease;
+}
+
+.logo:hover {
+	color: #d50a0a;
+	text-shadow: 0 0 10px black;
+}
+
+/* navbar */
+nav ul {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+}
+
+nav a {
+	margin: 0 19px;
+	transition: color .3s ease;
+}
+
+nav a:hover {
+	color: #d50a0a;
+}
+
+/* menus navbar */
+#menu:before,
+#menu:after {
+	content: '';
+	display: table;
+}
+
+#menu:after {
+	clear: both;
+}
+
+#menu li {
+	float: left;
+	position: relative;
+}
+
+#menu a {
+	padding: 7px 9px;
+	float: left;
+	text-transform: left;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-decoration: none;
+	color: white
+}
+
+#menu li:hover>a {
+	color: #d50a0a;
+}
+
+#menu ul {
+	margin: 12px 0px;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 46px;
+	left: 0;
+	z-index: 1;
+	transition: all .3s ease-in-out;
+}
+
+#menu li:hover>ul {
+	opacity: 1;
+	visibility: visible;
+	margin: 0;
+	text-shadow: 0 0 10px black;
+}
+
+/* formatacao botao */
+.botao {
+	color: white;
+	padding: 15px 30px;
+	border-radius: 5px;
+	background: #d50a0a;
+	margin-right: 10px;
+	transition: opacity .4s ease;
+}
+
+.botao:hover {
+	opacity: .6;
+}
+
+.container {
+	display: flex;
+	margin-top: 86px;
+}
+
+.container .regras {
+	width: 1329px;
+}
+/* caixa de texto */
+.principalbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffff;
+	max-width: 80%;
+	margin: auto;
+}
+
+/* textos */
+.textogrande {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+}
+
+.textopequeno {
+	font-size: 18px;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* secoes */
+.secao1 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img1 {
+	background-image: url(../assets2/1805.png);
+	background-position: center;
+	background-size: cover;
+
+	height: 380px;
+	width: 711px;
+	display: flex;
+}
+
+.secao2 {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img2 {
+	background-image: url(../assets2/1823.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 639px;
+	display: flex;
+}
+
+.secao3 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img3 {
+	background-image: url(../assets2/1860.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 709px;
+	display: flex;
+}
+
+
+.secao4 {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img4 {
+	background-image: url(../assets2/1876.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.secao5 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img5 {
+	background-image: url(../assets2/1905-2.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 709px;
+	display: flex;
+}
+
+.secao6 {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img6 {
+	background-image: url(../assets2/1920.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.secao7 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img7 {
+	background-image: url(../assets2/1933.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 709px;
+	display: flex;
+}
+
+.secao8 {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img8 {
+	background-image: url(../assets2/1942.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.secao9 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img9 {
+	background-image: url(../assets2/1950.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 709px;
+	display: flex;
+}
+
+.secao10 {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img10 {
+	background-image: url(../assets2/1960.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.secao11 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img11 {
+	background-image: url(../assets2/1967.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 709px;
+	display: flex;
+}
+
+.secao12 {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img12 {
+	background-image: url(../assets2/1970-1993.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.secao13 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img13 {
+	background-image: url(../assets2/1993.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 709px;
+	display: flex;
+}
+
+.secao14 {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img14 {
+	background-image: url(../assets2/2001.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.secao15 {
+	background-color: #013369;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img15 {
+	background-image: url(../assets2/2007.png);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 709px;
+	display: flex;
+}
