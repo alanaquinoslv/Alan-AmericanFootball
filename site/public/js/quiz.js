@@ -25,13 +25,13 @@ var myQuestions = [
     {
         question: "Formação defensiva que faz analogia à guerra",
         answers: {
-            a: 'Blitz',
+            a: 'Sneak',
             b: 'Mike',
             c: 'Shotgun',
-            d: 'Sneak',
+            d: 'Blitz',
         },
         // resposta correta para correção
-        correctAnswer: 'a'
+        correctAnswer: 'd'
     }
 ];
 
@@ -62,7 +62,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
                 // radio para html
                 answers.push(
-                    '<label>'
+                    '<label class="label">'
                     // passa o valor da letra de resposta
                     + '<input type="radio" name="question' + i + '" value="' + letter + '">'
                     //	+ letter + ')
@@ -92,6 +92,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         var userAnswer = '';
         // resposta acertada
         var numCorrect = 0;
+        // pontos
+        var pontos = 0
 
 
         for (var i = 0; i < questions.length; i++) {
@@ -105,19 +107,20 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 // se resposta marcada for correta aumenta numero de acerto
 
                 numCorrect++;
+                pontos += 10
 
 
-                answerContainers[i].style.color = 'lightgreen';
+                answerContainers[i].style.color = 'rgb(75, 250, 32)';
             }
 
             else {
 
-                answerContainers[i].style.color = 'red';
+                answerContainers[i].style.color = 'rgb(255, 0, 0)';
             }
         }
 
 
-        resultsContainer.innerHTML = numCorrect + ' de ' + questions.length;
+        resultsContainer.innerHTML = numCorrect + ' de ' + questions.length + '<br> ' + ' Pontos: ' + pontos;
     }
 
     

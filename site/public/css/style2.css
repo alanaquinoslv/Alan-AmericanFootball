@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* esconde conteudo grande */
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 0 0 10px gray;
+  text-transform: uppercase;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 65px;
+}
+
+.logo {
+  text-transform: uppercase;
+  text-shadow: 0 0 10px gray;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  transition: color .3s ease;
+}
+
+.logo:hover {
+  color: #d50a0a;
+  text-shadow: 0 0 10px black;
+}
+
+/* navbar */
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav a {
+  margin: 0px 60px 0 15px;
+  transition: color .3s ease;
+  letter-spacing: 3px;
+}
+
+nav a:hover {
+  color: #d50a0a;
+}
+
+/* menus navbar */
+#menu:before, #menu:after {
+  content: '';
+  display: table;
+}
+
+#menu:after {
+  clear: both;
+}
+
+#menu li {
+  float: left;
+  position: relative;
+}
+
+#menu a {
+  padding: 7px 9px;
+  float: left;
+  text-transform: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+#menu li:hover > a {
+  color: #d50a0a;
+}
+
+#menu ul {
+  margin: 10px 0px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+
+#menu li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+}
+
+
+/* conteudo tela */
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url(../assets2/wp2389351-american-football-wallpapers.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner .container h4 {
+  color: black;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  text-shadow: 0 0 10px black;
+}
+
+.banner .container h1 {
+  font-size: 50px;
+  font-weight: 400;
+  color: black;
+  text-transform: capitalize;
+  margin: 10px 0 32px 0;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px gray;
+}
+
+/* formatacao botao */
+.botao {
+  color: transparent;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background: transparent;
+  margin-right: 10px;
+  transition: opacity .4s ease;
+}
+
+.botao:hover {
+  opacity: .6;
+}
