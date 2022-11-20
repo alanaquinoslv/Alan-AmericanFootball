@@ -1,3 +1,8 @@
+// resposta acertada
+var numCorrect = 0;
+// pontos
+var pontos = 0
+
 // vetor com questoes e alternativas
 var myQuestions = [
     {
@@ -112,12 +117,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         // resposta marcada
         var userAnswer = '';
-        // resposta acertada
-        var numCorrect = 0;
-        // pontos
-        var pontos = 0
-
-
+        
         for (var i = 0; i < questions.length; i++) {
 
             // deixa de ser nulo e vira a letra marcada
@@ -153,4 +153,25 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         showResults(questions, quizContainer, resultsContainer);
         window.prompt('Antes de mostrar o resultado, o que você achou do esporte?')
     }
+}
+
+function cadastrar() {
+    console.log("cadastrar")
+
+    fetch(`/routeQuiz/quizCadastrar`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUsuario: sessionStorage.ID_USUARIO,
+            pontos: pontos,
+            acertos: numCorrect
+        })
+    }).then((response) => {
+        console.log("Resp QUIZ: ", response)
+
+    }).catch((error) => {[
+        console.log("Erro: " + error)
+    ]})
 }

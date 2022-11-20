@@ -7,7 +7,6 @@ comandos para mysql - banco local - ambiente de desenvolvimento
 */
 
 CREATE DATABASE football;
-
 USE football;
 
 CREATE TABLE usuario (
@@ -17,19 +16,23 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+create table quiz (
+idQuiz int primary key auto_increment,
+fkUsuario int,
+foreign key (fkUsuario) references usuario(id),
+acertos int,
+pontos int
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
+create table comentario (
+idComent varchar (45),
+fkUsuario int,
+foreign key (fkUsuario) references usuario (id),
+comentario varchar (200)
 );
+
+
+
 
 
 
