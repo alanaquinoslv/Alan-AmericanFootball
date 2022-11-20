@@ -10,8 +10,8 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     font-family: sans-serif;
-    color: rgb(255, 255, 255);
-    background: url(../assets2/b3146766e0cb15a980230cc3fe23b171.jpg);
+    color: rgb(0, 0, 0);
+    background: url(../assets2/quiz.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -25,35 +25,36 @@ body {
     text-align: center; */
 
     position: absolute;
-    width: 600px;
-    height: 450px;
+    width: 650px;
+    height: 610px;
     text-align: center;
-    top: 45%;
-    left: 50%;
+    top: 50%;
+    left: 24%;
     transform: translate(-50%, -50%);
-    background: rgb(71, 71, 71);
-    opacity: .9 ;
+    background: rgb(255, 255, 255);
+    opacity: .8;
     border-radius: 5px;
 }
 
 .question {
-    font-weight: 500;
-    margin-top: 40px;
-    text-shadow: 0 0 10px #ffff;
+    font-weight: 700;
+    margin-top: 37px;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .answers {
+    font-weight: 200;
     margin-top: 10px;
     text-shadow: 0 0 10px #ffff;
 }
 
 #submit {
-    font-size: 20px;
+    font-size: 16px;
     background-color: #013369;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
     margin-top: 20px;
     margin-left: 15px;
@@ -63,7 +64,7 @@ body {
 
 #submit:hover {
     background-color: #012953;
-    opacity: .7;
+    opacity: .9;
 }
 
 #results {
@@ -74,5 +75,3 @@ body {
     margin: 5px 5px;
     text-shadow: 0 0 10px #0000;
 }
-
-

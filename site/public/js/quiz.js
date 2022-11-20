@@ -1,7 +1,7 @@
 // vetor com questoes e alternativas
 var myQuestions = [
     {
-        question: "Quantos pontos valem o TOUCHDOWN?",
+        question: "Quantos pontos vale o touchdown?",
         answers: {
             a: '6 pontos',
             b: '3 pontos',
@@ -23,7 +23,7 @@ var myQuestions = [
         correctAnswer: 'b'
     },
     {
-        question: "Formação defensiva que faz analogia à guerra",
+        question: "Formação defensiva que faz analogia à guerra:",
         answers: {
             a: 'Sneak',
             b: 'Mike',
@@ -32,6 +32,28 @@ var myQuestions = [
         },
         // resposta correta para correção
         correctAnswer: 'd'
+    },
+    {
+        question: "O que é o punt?",
+        answers: {
+            a: '"Gol contra"',
+            b: 'Perda da bola',
+            c: 'Recuo',
+            d: 'Roubo de bola',
+        },
+        // resposta correta para correção
+        correctAnswer: 'c'
+    },
+    {
+        question: "Qual brasileiro jogou uma partida de temporada regular na NFL?",
+        answers: {
+            a: 'Cairo Santos',
+            b: 'Breno Giacomini',
+            c: 'Durval Queiroz',
+            d: 'Maikon Bonani',
+        },
+        // resposta correta para correção
+        correctAnswer: 'a'
     }
 ];
 
@@ -120,7 +142,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         }
 
 
-        resultsContainer.innerHTML = numCorrect + ' de ' + questions.length + '<br> ' + ' Pontos: ' + pontos;
+        resultsContainer.innerHTML = 'Você acertou ' + numCorrect + ' de ' + questions.length + '<br> ' + ' Pontos: ' + pontos;
     }
 
     
@@ -129,5 +151,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
     // mostra resultado quando clicka
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
+        window.prompt('Antes de mostrar o resultado, o que você achou do esporte?')
     }
 }

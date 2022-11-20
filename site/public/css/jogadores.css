@@ -1,0 +1,376 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 0 0 10px gray;
+	text-transform: uppercase;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1329px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 10px;
+	background-color: black;
+}
+
+.logo {
+	text-transform: uppercase;
+	text-shadow: 0 0 10px gray;
+	padding: 15px 30px;
+	font-size: 2rem;
+	letter-spacing: 3px;
+	transition: color .3s ease;
+}
+
+.logo:hover {
+	color: #d50a0a;
+	text-shadow: 0 0 10px black;
+}
+
+/* navbar */
+nav ul {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+}
+
+nav a {
+	margin: 0 19px;
+	transition: color .3s ease;
+}
+
+nav a:hover {
+	color: #d50a0a;
+}
+
+/* menus navbar */
+#menu:before,
+#menu:after {
+	content: '';
+	display: table;
+}
+
+#menu:after {
+	clear: both;
+}
+
+#menu li {
+	float: left;
+	position: relative;
+}
+
+#menu a {
+	padding: 7px 9px;
+	float: left;
+	text-transform: left;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-decoration: none;
+	color: white
+}
+
+#menu li:hover>a {
+	color: #d50a0a;
+}
+
+#menu ul {
+	margin: 12px 0px;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 46px;
+	left: 0;
+	z-index: 1;
+	transition: all .3s ease-in-out;
+}
+
+#menu li:hover>ul {
+	opacity: 1;
+	visibility: visible;
+	margin: 0;
+	text-shadow: 0 0 10px black;
+}
+
+/* formatacao botao */
+.botao {
+	color: white;
+	padding: 15px 30px;
+	border-radius: 5px;
+	background: #d50a0a;
+	margin-right: 10px;
+	transition: opacity .4s ease;
+}
+
+.botao:hover {
+	opacity: .6;
+}
+
+.container {
+	display: flex;
+	margin-top: 86px;
+	flex-flow: row wrap;
+}
+
+
+/* caixa de texto */
+.principalbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffff;
+	max-width: 80%;
+	margin: auto;
+}
+
+/* textos */
+.textogrande {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+}
+
+.textopequeno {
+	font-size: 18px;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* secoes */
+.secaovermelha {
+	background-color: #d50a0a;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.secaoazul {
+	background-color: #013369;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+/* secao regras */
+.secaoregras {
+	background: linear-gradient(50deg, white, gray, black);
+	height: 121px;
+	width: 1370px;
+	display: flex;
+}
+
+.secaoregras h1 {
+	margin-top: 20px;
+	text-shadow: 0 0 10px #000000;
+}
+
+/* secao brasileiros */
+.secaobrasileiros {
+	background: linear-gradient(to right, #00a30e, #cff301, #0120cf);
+	height: 121px;
+	width: 1370px;
+	display: flex;
+}
+
+.secaobrasileiros h1 {
+	margin-top: 20px;
+	text-shadow: 0 0 10px #000000;
+}
+
+/* imagens */
+.img1 {
+	background-image: url(../assets2/players1.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 711px;
+	display: flex;
+}
+
+
+.img2 {
+	background-image: url(../assets2/players2.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 639px;
+	display: flex;
+}
+
+.img3 {
+	background-image: url(../assets2/players3.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img4 {
+	background-image: url(../assets2/players4.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img5 {
+	background-image: url(../assets2/players5.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img6 {
+	background-image: url(../assets2/players6.jpg);
+	background-position: 425px;
+	background-size: cover;
+	height: 380px;
+	width: 358px;
+	display: flex;
+}
+.img6-2 {
+	background-image: url(../assets2/players6-2.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 280px;
+	display: flex;
+}
+
+.img7 {
+	background-image: url(../assets2/players7.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img8 {
+	background-image: url(../assets2/players8.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img9 {
+	background-image: url(../assets2/players9.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img10 {
+	background-image: url(../assets2/players10.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img11 {
+	background-image: url(../assets2/players11.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img12 {
+	background-image: url(../assets2/players12.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img13 {
+	background-image: url(../assets2/players13.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img14 {
+	background-image: url(../assets2/players14.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img15 {
+	background-image: url(../assets2/players15.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img16 {
+	background-image: url(../assets2/players16.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img17 {
+	background-image: url(../assets2/players17.jpeg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img18 {
+	background-image: url(../assets2/players18.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img19 {
+	background-image: url(../assets2/players19.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
