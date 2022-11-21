@@ -117,7 +117,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         // resposta marcada
         var userAnswer = '';
-        
+
         for (var i = 0; i < questions.length; i++) {
 
             // deixa de ser nulo e vira a letra marcada
@@ -143,49 +143,25 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
 
         resultsContainer.innerHTML = 'Você acertou ' + numCorrect + ' de ' + questions.length + '<br> ' + ' Pontos: ' + pontos;
+        registrarPontos(pontos)
     }
 
-    
+
     showQuestions(questions, quizContainer);
 
     // mostra resultado quando clicka
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
-        window.prompt('Antes de mostrar o resultado, o que você achou do esporte?')
+        var comentario = window.prompt('Antes de mostrar o resultado, o que você achou do esporte?')
+        console.log(comentario)
     }
 }
 
-// function cadastrar() {
-//     console.log("cadastrar")
-
-//     fetch(`/routeQuiz/quizCadastrar`, {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify({
-//             idUsuario: sessionStorage.ID_USUARIO,
-//             pontos: pontos,
-//             acertos: numCorrect
-//         })
-//     }).then((response) => {
-//         console.log("Resp QUIZ: ", response)
-
-//     }).catch((error) => {[
-//         console.log("Erro: " + error)
-//     ]})
-// }
-
-function cadastrar() {
-    //aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var acertosVar = numCorrect
-    var scoreVar = pontos
+function registrarPontos(pontos) {
+    var fkUsuario = sessionStorage.ID_USUARIO;
 
     // Enviando o valor da nova input
-    fetch("/routeQuiz/cadastrar", {
+    fetch("/usuarios/registrarPontos", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -193,32 +169,18 @@ function cadastrar() {
         body: JSON.stringify({
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
-            acertosServer: acertosVar,
-            scoreServer: scoreVar,
+            pontosServer: pontos,
+            fkUsuarioServer: fkUsuario,
+            
         })
     }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
-        if (resposta.ok) {
-          //  cardErro.style.display = "block";
-            setTimeout(() => {
-                window.location = "quiz.html";
-            }, "2000")
-
-         //   limparFormulario();
-          // finalizarAguardar();
-        } else {
-            throw ("Houve um erro ao tentar realizar o cadastro!");
-        }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-       // finalizarAguardar();
+        // finalizarAguardar();
     });
 
     return false;
 }
-
-// function sumirMensagem() {
- //   cardErro.style.display = "none"
-//}
