@@ -13,16 +13,16 @@
 
 <body>
     <header>
-        <a href="https://github.com/alanaquinoslv" target="_blank" rel="noopener noreferrer" class="logo">Alan
-            Aquino</a>
+        <!-- <a href="#"class="logo"></a> -->
+        <p id="p_usuario" class="logo">Olá Usuario</p>
         <nav>
             <ul id="menu" class="menu">
-                <li><a href="./historia.html">História</a></li>
-                <li><a href="./jogo.html">Entenda o jogo</a>
+                <li><a href="./historia2.html">História</a></li>
+                <li><a href="#">Entenda o jogo</a>
                     <ul>
-                        <li><a href="jogo.html">Regras</a></li>
-                        <li><a href="./jogadores.html">Jogadores</a>
-                        <li><a href="./draft.html">Draft</a>
+                        <li><a href="jogo2.html">Regras</a></li>
+                        <li><a href="./jogadores2.html">Jogadores</a>
+                        <li><a href="./draft2.html">Draft</a>
                         </li>
                     </ul>
                 </li>
@@ -46,6 +46,7 @@
                 <li><a href="./quiz.html">Quiz</a></li>
             </ul>
         </nav>
+        <a href="#" onclick="limparSessao()" class="botao">Sair</a>
        
     </header>
     <section class="banner">
@@ -61,3 +62,6 @@
 </body>
 
 </html>
+<script>
+     p_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>

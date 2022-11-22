@@ -50,9 +50,8 @@ nav ul {
 }
 
 nav a {
-  margin: 0px 60px 0 15px;
+  margin: 0 19px;
   transition: color .3s ease;
-  letter-spacing: 3px;
 }
 
 nav a:hover {
@@ -141,10 +140,10 @@ nav a:hover {
 
 /* formatacao botao */
 .botao {
-  color: transparent;
+  color: white;
   padding: 15px 30px;
   border-radius: 5px;
-  background: transparent;
+  background: #d50a0a;
   margin-right: 10px;
   transition: opacity .4s ease;
 }

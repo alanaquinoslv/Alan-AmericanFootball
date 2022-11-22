@@ -13,15 +13,16 @@ function validarSessao() {
 
         // finalizarAguardar();
     } else {
-        window.location = "../login.html";
+        window.location = "./login.html";
     }
 }
 
 function limparSessao() {
     // aguardar();
     sessionStorage.clear();
+    alert('Finalizando sessão...')
     // finalizarAguardar();
-    window.location = "../login.html";
+    window.location = "./index.html";
 }
 
 // carregamento (loading)

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets2/rugby-ball.png">
+    <link rel="stylesheet" href="./css/jogo.css">
+    <script src="./js/funcoes.js"></script>
+    <title>Entenda o jogo</title>
+</head>
+
+<html>
+
+<body>
+
+    <header>
+        <a class="logo"> <p id="p_usuario" class="logo"></p> </a>
+        <nav>
+            <ul id="menu" class="menu">
+                <li><a href="./index2.html">Home</a></li>
+                <li><a href="#">Ligas</a>
+                    <ul>
+                        <li><a href="https://www.nfl.com/" target="_blank" rel="noopener noreferrer">NFL</a></li>
+                        <li><a href="https://www.cfl.ca/" target="_blank" rel="noopener noreferrer">CFL</a></li>
+                        <li><a href="https://www.ligabfa.com/" target="_blank" rel="noopener noreferrer">BFA</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Calendário</a>
+                    <ul>
+                        <li><a href="https://www.nfl.com/schedules/2022/REG1/" target="_blank"
+                                rel="noopener noreferrer">NFL</a></li>
+                        <li><a href="https://www.cfl.ca/schedule/2022/#week-1" target="_blank"
+                                rel="noopener noreferrer">CFL</a></li>
+                        <li><a href="https://www.ligabfa.com/calendario" target="_blank"
+                                rel="noopener noreferrer">BFA</a></li>
+                    </ul>
+                </li>
+                <li><a href="./historia2.html">História</a></li>
+                <li><a href="#">Entenda o jogo</a>
+                    <ul>
+                        <li><a href="jogo2.html">Regras</a></li>
+                        <li><a href="./jogadores2.html">Jogadores</a>
+                        <li><a href="./draft2.html">Draft</a>
+                        </li>
+                    </ul>
+                    <li><a href="./quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <a href="#" onclick="limparSessao()" class="botao">Sair</a>
+    </header>
+
+    <div class="container">
+
+        <section class="secaoregras">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Guia Para Iniciantes
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- video -->
+        <video src="../public/assets2/Guia_NFL.mp4" width="100%" height="520px" controls loop preload="auto"
+            poster="../public/assets2/poster2.jpg"></video>
+
+        <section class="secaoregras">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Regras
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Quanto dura um jogo
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> São quatro períodos de 15 minutos de duração, totalizando 60 minutos de partida. O
+                        cronômetro, entretanto, pode ser parado em algumas situações: se o jogador com a bola sair pela
+                        lateral, se algum time pontuar, se houver um passe incompleto (bola lançada que toca o chão
+                        antes de ser pega) e se houver falta.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img1"></div>
+
+        <!-- imagem -->
+        <div class="img2"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Os times
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> São 11 atletas em campo para cada equipe. Como não há limite de substituições, os jogadores
+                        podem entrar e sair quantas vezes o técnico quiser. Assim, quando o time tem a posse de bola,
+                        coloca 11 atacantes em campo. Quando não está com a bola, usa 11 defensores. Nas jogadas de
+                        chute entram os chamados "especialistas".
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Início da partida
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> O kickoff acontece no início do 1º e do 2º tempos e após qualquer pontuação. A bola é
+                        colocada na linha de 35 jardas e chutada pelo kicker em direção ao campo do rival. Um jogador do
+                        time adversário, o retornador, recebe a bola e tenta avançar com ela até ser derrubado, ou sair
+                        de campo, ou conseguir um touchdown.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img3"></div>
+
+        <!-- imagem -->
+        <div class="img4"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Início da jogada
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> O início da jogada é chamado de snap. O center entrega a bola por baixo das pernas para o
+                        quarterback - o "cérebro" do time. O quarterback pode entregá-la a um jogador ao seu lado,
+                        lançá-la em profundidade ou ele mesmo correr com a bola.
+
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Time-outs (pedidos de tempo)
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Os times têm direito a pedidos de tempo (os timeouts). São três na 1ª metade do jogo e mais
+                        três na 2ª. Há ainda uma parada automática quando faltam 2min para o fim da 1ª etapa e outra a
+                        2min do fim da partida, chamadas two-minute warning.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img5"></div>
+
+        <!-- imagem -->
+        <div class="img6"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        O campo de jogo
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Endzone - 10 jardas (9,14 m)
+                        Sideline (lateral) - 100 jardas (91,44 m)
+                        Marcação de jardas
+                        Área Técnica
+                        Goal post (trave) - largura de 18 pés (5,64 m) e altura da base de 10 pés (3,04 m)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Desafio
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Em qualquer momento antes do 'two-minute warning', um técnico pode lançar uma bandeira
+                        vermelha no gramado e desafiar uma jogada antes do snap seguinte. Cada treinador pode ter dois
+                        desafios por jogo, e ganhar um desafio extra caso esteja certo em ambos. Se errar e a jogada
+                        seguir como foi marcada, seu time perde um timeout. Se acertar, ele mantém seus pedidos de
+                        tempo. Durante o 'two-minute warning', não há desafios, e os juízes decidem rever ou não uma
+                        jogada.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img7"></div>
+
+        <section class="secaoregras">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Ações de ataque
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- imagem -->
+        <div class="img8"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Corrida
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Um jogador (geralmente o running back ou o fullback) recebe a bola das mãos do quarterback
+                        e então segue em frente, tentando penetrar a defesa adversária. O próprio quarterback pode não
+                        passar a bola e ser responsável pela ação.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Passe e recepção
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> O quarterback pode lançar a bola para um recebedor avançado. Isso é permitido só uma vez
+                        por jogada. E o passe deve ser realizado atrás da linha de scrimmage (a linha onde começou a
+                        jogada). A recepção só é válida se o jogador segurar a bola antes de ela tocar o chão.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img9"></div>
+
+        <!-- imagem -->
+        <div class="img10"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Bloqueio
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Cinco jogadores do ataque (offensive linemen) são encarregados de proteger o quarterback
+                        nas jogadas de passe ou abrir caminho para o running back nas jogadas de corrida. Eles fazem
+                        isso empurrando os defensores adversários. Outros atacantes, como o tight end, o fullback e
+                        mesmo os recebedores também bloqueiam conforme a jogada escolhida pelo técnico. Importante: não
+                        é permitido segurar os defensores adversários nem empurrá-los pelas costas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secaoregras">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Ações de defesa
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Tackle
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> É o ato de derrubar o jogador que estiver com a posse da bola, interrompendo assim o avanço
+                        do adversário.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img11"></div>
+
+        <!-- imagem -->
+        <div class="img12"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Sack
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> É como se chama o tackle feito no quarterback antes que ele consiga entregar a bola a um
+                        colega de time.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Interceptação
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Consiste em roubar a bola que foi lançada pelo quarterback adversário enquanto ela ainda
+                        está no ar.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img13"></div>
+
+        <section class="secaoregras">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Marcando pontos
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- imagem -->
+        <div class="img14"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Touchdown - Vale 6 pontos
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> É o grande objetivo do jogo, conquistado sempre que uma equipe conduz a bola além da linha
+                        de fundo do adversário (a chamada endzone).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Extra point - Vale 1 ponto
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> A equipe que acaba de marcar um touchdown recebe também a chance de chutar a bola entre as
+                        traves. Se acertar, ganha mais 1 ponto.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img15"></div>
+
+        <!-- imagem -->
+        <div class="img16"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Conversão de 2 pontos - Vale 2 pontos
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Em vez de tentar o extra point, o time que marcou um touchdown pode tentar um novo
+                        touchdown, partindo da linha de 2 jardas e valendo 2 pontos. Mas, se o time de defesa conseguir
+                        recuperar a bola e retornar até a end zone adversária durante esta tentativa, marca dois pontos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Field goal - Vale 3 pontos
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>A qualquer momento, o time que está atacando - com a posse da bola - pode executar um chute
+                        com a bola partindo do chão. Se acertar entre as traves, ganha 3 pontos. Se errar, o rival
+                        inicia sua campanha do local onde foi feito o chute.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img17"></div>
+
+        <!-- imagem -->
+        <div class="img18"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Safety - Vale 2 pontos
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> É o equivalente ao gol contra do futebol. Acontece caso o jogador com a posse da bola seja
+                        derrubado dentro de sua própria endzone ou, ainda, se seu time cometer falta ou sair de campo
+                        por trás ou pelos lados da endzone.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secaoregras">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Troca da posse de bola
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Fumble
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>É a perda acidental da bola no meio de uma jogada. Ou seja, se um atleta deixa a bola cair,
+                        ela fica "viva" e pode ser recuperada pelo adversário.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img19"></div>
+
+        <!-- imagem -->
+        <div class="img20"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Interceptação
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> É a perda acidental em um lançamento. Se a bola for pega no ar por um defesor adversário,
+                        em vez de ser agarrada pelo recebedor a quem se destina o passe, ocorre a troca de posse. É a
+                        pior coisa que pode acontecer para um quarterback.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Tentativa de field goal malsucedida
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>O adversário ganha a posse de bola se o time que está atacando tentar um field goal e não
+                        converter. A jogada se inicia, então, no ponto de onde a bola foi chutada.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img21"></div>
+
+        <!-- imagem -->
+        <div class="img22"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Perda em downs
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Um time é obrigado a ceder a bola ao adversário no ponto exato de sua última tentativa se
+                        gastar seus 4 downs e não conseguir avançar pelo menos 10 jardas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Punt
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>É um recurso de segurança, usado normalmente na 4ª e última tentativa de avanço. Ao invés
+                        vez de tentar avançar, o time chuta a bola para o rival, no ponto mais distante possível do
+                        campo. A ideia é não correr o risco de perder a posse da bola em posição de campo favorável ao
+                        adversário (perda em downs).
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img23"></div>
+
+        <section class="secaoregras">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Faltas
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- imagem -->
+        <div class="img24"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Bandeira amarela
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br> Quando uma "bandeira amarela" é jogada por um árbitro, significa que ele está marcando uma
+                        penalidade ou falta em campo e precisa indicá-la aos jogadores, treinadores e outros árbitros.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Atraso do jogo
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>O time atacante tem 40 segundos para colocar a bola em jogo entre uma jogada e outra.
+                        Punição: se exceder o tempo determinado, o time atacante é obrigado a recua 5 jardas.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img25"></div>
+
+        <!-- imagem -->
+        <div class="img26"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Saída falsa
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>Para começar uma jogada de modo válido, os jogadores do time com a posse da bola precisam
+                        estar totalmente parados. Somente um jogador (que não esteja na primeira linha) pode estar em
+                        movimento, sempre paralelo à linha de scrimmage. Qualquer movimento de outro jogador que simule
+                        o início da jogada é caracterizado como falta. Punição: recuo de 5 jardas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Offside
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>É marcada se um jogador do time que se defende ultrapassar a linha de scrimmage antes do
+                        início da jogada. Punição: a defesa recua 5 jardas.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img27"></div>
+
+        <!-- imagem -->
+        <div class="img28"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Holding
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>Durante uma jogada, somente o jogador com a posse da bola pode ser segurado ou agarrado.
+                        Todos os demais podem apenas se empurrar. Punição: quando um atacante segura um defensor, seu
+                        time é punido com recuo de 10 jardas. Se um defensor segurar um atacante, sua equipe perde 5
+                        jardas e o ataque ganha o primeiro down automático.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Contato ilegal
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>Um jogador de defesa só pode obstruir ou empurrar um atacante num limite de 5 jardas da
+                        linha de scrimmage (onde começa a jogada). Qualquer contato além de 5 jardas configura falta.
+                        Punição: recuo de 5 jardas para a defesa.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img29"></div>
+
+        <!-- imagem -->
+        <div class="img30"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Interferência no passe
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>Não é permitido a um defensor deslocar um atacante para impedir a recepção. Ele só pode
+                        encostar no atacante no momento do contato com a bola. Punição: primeiro down automático, com a
+                        bola sendo posicionada no local da falta.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Falta pessoal
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>São todas as atitudes que colocam em risco a integridade do jogador adversário, incluindo
+                        segurar a máscara do capacete de outro jogador, usar o capacete contra a cabeça ou os joelhos do
+                        adversário, aplicar um tackle fora dos limites do campo e muitas outras situações. Punição: 15
+                        jardas e primeiro down automático.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img31"></div>
+
+        <!-- imagem -->
+        <div class="img32"></div>
+        <!-- box texto -->
+        <section class="secaoazul">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Intentional grouding
+
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>É marcada quando um quarterback se livra da bola claramente para evitar um sack e a perda de
+                        jardas que seria ocasionada por isso. A falta só é marcada se o quarterback estiver no chamado
+                        "pocket", que é a área de proteção de seus bloqueadores, e se ele atirar a bola onde não haja
+                        jogador de seu time. Punição: recuo de 10 jardas e perda de uma chance de atacar (um down).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- box texto -->
+        <section class="secaovermelha">
+            <div class="principalbox">
+                <div class="primeira">
+                    <h1 class="textogrande" id="inicio">
+                        Exclusão
+                    </h1>
+
+                    <p class="textopequeno">
+                        <br>Se um jogador cometer duas faltas pessoais por conduta antidesportiva na mesma partida, ele
+                        será excluído. O time punido não fica com um atleta a menos em campo, mas o jogador
+                        desqualificado não poderá retornar ao duelo.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- imagem -->
+        <div class="img33"></div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    p_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>
