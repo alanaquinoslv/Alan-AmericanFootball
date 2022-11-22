@@ -96,6 +96,7 @@ function cadastrar(req, res) {
 
 function registrarPontos(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var acertos = req.body.acertosServer;
     var pontos = req.body.pontosServer;
     var fkUsuario = req.body.fkUsuarioServer;
 
@@ -104,7 +105,7 @@ function registrarPontos(req, res) {
     if (pontos == undefined) {
         res.status(400).send("Seus pontos estão undefined!");
     } else {
-        usuarioModel.registrarPontos(pontos, fkUsuario)
+        usuarioModel.registrarPontos(acertos, pontos, fkUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);

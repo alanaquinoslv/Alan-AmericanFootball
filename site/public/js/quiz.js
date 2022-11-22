@@ -169,6 +169,7 @@ function registrarPontos(pontos) {
         body: JSON.stringify({
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
+            acertosServer: numCorrect,
             pontosServer: pontos,
             fkUsuarioServer: fkUsuario,
             
