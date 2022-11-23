@@ -36,9 +36,17 @@ body {
     border-radius: 5px;
 }
 
+.span_seta {
+    margin-top: 10px;
+    margin-right: 550px;
+	font-size: 40px;
+	color: #000000;
+	text-decoration: none;
+}
+
 .question {
     font-weight: 700;
-    margin-top: 37px;
+    margin-top: 30px;
     text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 

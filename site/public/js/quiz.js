@@ -74,7 +74,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
     function showQuestions(questions, quizContainer) {
         // armazenando saída e respostas
-
+        
         var output = [];
         var answers;
 
