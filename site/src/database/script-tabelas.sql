@@ -33,7 +33,7 @@ comentario varchar (200)
 
 
 
-
+select nome, pontos from quiz join usuario on id = fkUsuario where id = 3
 
 
 

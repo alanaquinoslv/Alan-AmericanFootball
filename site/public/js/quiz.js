@@ -74,25 +74,25 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
     function showQuestions(questions, quizContainer) {
         // armazenando saída e respostas
-        
+
         var output = [];
         var answers;
 
-        // para cada questão -- fala qual posição do vetor esta
+        // lê as respostas e passa parametros para gerar a função quiz
         for (var i = 0; i < questions.length; i++) {
+            //inicia index e fala posição da lista e no fim passa para a proxima
 
-            // resetar respostas para colocar no output
+            // resposta fica em lista e reseta toda hora quando passa pra questao
             answers = [];
 
             // para cada resposta na questão -- add letra na resposta da questão que estiver no ocorrência
             for (letter in questions[i].answers) {
-
-                // radio para html
+                //add resposta em cada posição do loop
+                // pega respostas e escreve com radio para html
                 answers.push(
                     '<label class="label">'
                     // passa o valor da letra de resposta
                     + '<input type="radio" name="question' + i + '" value="' + letter + '">'
-                    //	+ letter + ')
                     + questions[i].answers[letter]
                     + '</label>'
                 );
@@ -119,12 +119,11 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
         var userAnswer = '';
 
         for (var i = 0; i < questions.length; i++) {
-
+            //mostra resposta pelo queryselector
             // deixa de ser nulo e vira a letra marcada
             userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
 
-
-
+            //compara resposta
             if (userAnswer === questions[i].correctAnswer) {
                 // se resposta marcada for correta aumenta numero de acerto
 
@@ -144,6 +143,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         resultsContainer.innerHTML = 'Você acertou ' + numCorrect + ' de ' + questions.length + '<br> ' + ' Pontos: ' + pontos;
         registrarPontos(pontos)
+        buscarPontos(pontos)
     }
 
 
@@ -172,7 +172,7 @@ function registrarPontos(pontos) {
             acertosServer: numCorrect,
             pontosServer: pontos,
             fkUsuarioServer: fkUsuario,
-            
+
         })
     }).then(function (resposta) {
 
@@ -185,3 +185,23 @@ function registrarPontos(pontos) {
 
     return false;
 }
+
+function buscarPontos(fkUsuario) {
+    var fkUsuario = sessionStorage.ID_USUARIO;
+
+    // Enviando o valor da nova input
+    fetch(`/usuarios/buscarPontos/${fkUsuario}`).then(resposta => {
+        console.log(resposta)
+        if (resposta.ok) {
+            resposta.json().then((data) => {
+                console.log(data)
+            })
+        }
+    })
+        .catch(function (error) {
+            console.log("erro" + error)
+        })
+
+    return false;
+}
+

@@ -31,8 +31,8 @@ body {
 } */
 
 .text {
-    margin-left: 400px;
-    margin-top: 15px;
+    margin-left: 395px;
+    margin-top: 10px;
     font-size: 25px;
     font-weight: 700;
     color: #fff;
@@ -42,7 +42,8 @@ body {
 
 .text h1 {
     font-size: 30px;
-    margin-left: 98px;
+    margin-left: 0px;
+    text-shadow: 0 0 10px #000000;
 }
 
 .text input {
@@ -55,12 +56,17 @@ body {
     color: #013369;
 }
 
+input:hover {
+    box-shadow: 3px 3px 3px #c0cede;
+    transition: .3s ease;
+}
+
 
 .span_seta {
-    margin-top: 10px;
-    margin-right: 550px;
+    margin-left: 0px;
+    padding: 50px;
     font-size: 40px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
