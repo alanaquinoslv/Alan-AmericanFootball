@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 97vh;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    background: url(../assets2/campo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* .container {
+    display: flex;
+    width: 650px;
+    height: 610px;
+    text-align: center;
+    top: 50%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    opacity: .8;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+} */
+
+.text {
+    margin-left: 400px;
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-align: ce;
+    text-shadow: 0 0 10px #013369;
+}
+
+.text h1 {
+    font-size: 30px;
+    margin-left: 98px;
+}
+
+.text input {
+    border-radius: 3px;
+    height: 25px;
+    padding-top: 4px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #52a0f3;
+    color: #013369;
+}
+
+
+.span_seta {
+    margin-top: 10px;
+    margin-right: 550px;
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+}
+
+#submit {
+    text-align: center;
+    font-size: 18px;
+    background-color: #d50a0a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 15px;
+    transition: opacity .4s ease;
+    /* text-shadow: 0 0 10px white; */
+}
+
+#submit:hover {
+    background-color: #aa2525;
+    opacity: .9;
+}
+
+#div_msg {
+    margin-top: 5px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px #706e6e;
+    font-weight: 700;
+    font-size: 30px;
+}
