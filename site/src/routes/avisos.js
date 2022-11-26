@@ -31,4 +31,8 @@ router.delete("/deletar/:idAviso", function (req, res) {
     avisoController.deletar(req, res);
 });
 
+router.get("/buscarPontos/:fkUsuario", function (req, res) {
+    avisoController.buscarPontos(req, res);
+});
+
 module.exports = router;

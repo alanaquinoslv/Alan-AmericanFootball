@@ -32,7 +32,7 @@ comentario varchar (200)
 );
 
 
-
+select nome, max(pontos) as 'Pontuação max' from quiz join usuario on id = fkUsuario group by nome limit 5;
 select nome, pontos from quiz join usuario on id = fkUsuario where id = 3
 
 

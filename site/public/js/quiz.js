@@ -3,6 +3,9 @@ var numCorrect = 0;
 // pontos
 var pontos = 0
 
+var fkUsuario = sessionStorage.ID_USUARIO;
+
+
 // vetor com questoes e alternativas
 var myQuestions = [
     {
@@ -143,7 +146,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         resultsContainer.innerHTML = 'Você acertou ' + numCorrect + ' de ' + questions.length + '<br> ' + ' Pontos: ' + pontos;
         registrarPontos(pontos)
-        buscarPontos(pontos)
+        buscarPontos()
     }
 
 
@@ -158,8 +161,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 }
 
 function registrarPontos(pontos) {
-    var fkUsuario = sessionStorage.ID_USUARIO;
-
+    
     // Enviando o valor da nova input
     fetch("/usuarios/registrarPontos", {
         method: "POST",
@@ -186,22 +188,50 @@ function registrarPontos(pontos) {
     return false;
 }
 
-function buscarPontos(fkUsuario) {
-    var fkUsuario = sessionStorage.ID_USUARIO;
-
-    // Enviando o valor da nova input
-    fetch(`/usuarios/buscarPontos/${fkUsuario}`).then(resposta => {
-        console.log(resposta)
+function buscarPontos() {
+    //aguardar();
+    fetch(`/avisos/buscarPontos/${fkUsuario}`).then(function (resposta) {
         if (resposta.ok) {
-            resposta.json().then((data) => {
-                console.log(data)
-            })
-        }
-    })
-        .catch(function (error) {
-            console.log("erro" + error)
-        })
+            if (resposta.status == 204) {
+                var feed = document.getElementById("metrica");
+                var mensagem = document.createElement("span");
+                mensagem.innerHTML = "Nenhum resultado encontrado."
+                feed.appendChild(mensagem);
+                throw "Nenhum resultado encontrado!!";
+            }
 
-    return false;
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                var feed = document.getElementById("metrica");
+                feed.innerHTML = "";
+                for (let i = 0; i < resposta.length; i++) {
+                    var publicacao = resposta[i];
+                    console.log(resposta)
+                    // criando e manipulando elementos do HTML via JavaScript
+                    var divPublicacao = document.createElement("div");
+                    feed.innerHTML += `Nome: ${publicacao.nome} Pontuação: ${publicacao.max(pontos)}  <br>`
+                    console.log(publicacao.pontos)
+                }
+
+            });
+        } else {
+            throw ('Houve um erro na API!');
+        }
+    }).catch(function (resposta) {
+        console.error(resposta);
+    });
 }
+
+// modal
+  const modal = document.querySelector('.modal-container')
+
+  function openModal() {
+    modal.classList.add('active')
+  }
+
+  function closeModal() {
+    modal.classList.remove('active')
+  }  
+
 
