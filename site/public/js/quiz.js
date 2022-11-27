@@ -245,7 +245,7 @@ function buscarPontos() {
                     // criando e manipulando elementos do HTML via JavaScript
                     var divPublicacao = document.createElement("div");
 
-                    feed.innerHTML += `${cont}º - Nome: ${publicacao.nome} - Pontuação: ${publicacao.nome} <br>`
+                    feed.innerHTML += `${cont}º - Nome: ${publicacao.nome} - Pontuação: ${publicacao.pontos} <br>`
                     
                 }
 
