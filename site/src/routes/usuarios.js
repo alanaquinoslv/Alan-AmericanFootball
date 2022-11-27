@@ -20,6 +20,10 @@ router.post("/registrarPontos", function (req, res) {
     usuarioController.registrarPontos(req, res);
 })
 
+router.post("/registrarComentario", function (req, res) {
+    usuarioController.registrarComentario(req, res);
+})
+
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });

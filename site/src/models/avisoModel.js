@@ -92,7 +92,7 @@ function deletar(idAviso) {
 function buscarPontos(fkUsuario) {
     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarPontos()");
     var instrucao = `
-    select nome, max(pontos) from quiz join usuario on id = fkUsuario group by nome limit 5;
+    select u.nome, q.pontos from usuario u join quiz q on fkUsuario = id order by q.pontos desc limit 10;
     `;
     // select nome, pontos from quiz join usuario on id = fkUsuario where id = ${fkUsuario}
     console.log("Executando a instrução SQL: \n" + instrucao);

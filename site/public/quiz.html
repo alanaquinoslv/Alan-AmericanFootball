@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/quiz.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="../public/assets2/rugby-ball.png">
     <title>Quiz</title>
 </head>
@@ -26,7 +27,11 @@
             </div>
             <h3>Ranking</h3>
             <hr />
-            <div id="metrica"></div>
+            <div id="metrica">
+                <div>
+                    <canvas id="myChart"></canvas>
+                  </div>
+            </div>
             <hr />
 
         </div>
@@ -36,3 +41,29 @@
 
 </html>
 <script src="./js/quiz.js"></script>
+
+
+ <script>
+const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Nome', 'Nome2', 'Nome3', 'Nome4', 'Nome5', 'Nome6'],
+      datasets: [{
+        label: 'Pontuação',
+        data: [50, 20, 0, 10, 20, 30],
+        borderWidth: 1,
+        backgroundColor: 'rgb(253, 44, 44)'
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+  </script>
+

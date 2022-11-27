@@ -106,7 +106,8 @@ body {
 
 hr {
     border: 0px;
-    border-top: 1px solid lightblue;
+    border-top: 1px solid rgb(255, 0, 0);
+    margin: 20px;
 }
 
 .modal-container {
@@ -194,7 +195,27 @@ span {
     }
 }
 
-button:hover{
+button:hover {
     background-color: #013369;
     transition: .4s;
+}
+
+
+/* tabela */
+table {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 5px;
+    width: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #ff5151;
 }

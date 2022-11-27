@@ -25,7 +25,7 @@ pontos int
 );
 
 create table comentario (
-idComent varchar (45),
+idComent int primary key auto_increment,
 fkUsuario int,
 foreign key (fkUsuario) references usuario (id),
 comentario varchar (200)
@@ -34,7 +34,11 @@ comentario varchar (200)
 
 select nome, max(pontos) as 'Pontuação max' from quiz join usuario on id = fkUsuario group by nome limit 5;
 select nome, pontos from quiz join usuario on id = fkUsuario where id = 3
+select nome, max(pontos) as pontos from quiz join usuario on id = fkUsuario group by pontos limit 5;
 
 
 
+ select u.nome, q.pontos from usuario u join quiz q on fkUsuario = id group by u.nome
+order by q.pontos desc limit 5;
 
+select u.nome, q.pontos from usuario u join quiz q on fkUsuario = id order by q.pontos desc limit 5;

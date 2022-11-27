@@ -69,6 +69,7 @@ var myQuestions = [
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+var rankingButton = document.getElementById('ranking');
 
 // gerando função
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
@@ -155,13 +156,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
     // mostra resultado quando clicka
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
+
         var comentario = window.prompt('Antes de mostrar o resultado, o que você achou do esporte?')
         console.log(comentario)
+        registrarComentario(comentario)
     }
 }
 
 function registrarPontos(pontos) {
-    
+
     // Enviando o valor da nova input
     fetch("/usuarios/registrarPontos", {
         method: "POST",
@@ -175,6 +178,32 @@ function registrarPontos(pontos) {
             pontosServer: pontos,
             fkUsuarioServer: fkUsuario,
 
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+    });
+
+    return false;
+}
+
+function registrarComentario(comentario) {
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/registrarComentario", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            comentarioServer: comentario,
+            fkUsuarioServer: fkUsuario
         })
     }).then(function (resposta) {
 
@@ -204,15 +233,24 @@ function buscarPontos() {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
 
                 var feed = document.getElementById("metrica");
-                feed.innerHTML = "";
+                feed.innerHTML = ''
+                var titulo = ''
+
+                var cont = 0
+
                 for (let i = 0; i < resposta.length; i++) {
+                    cont++
                     var publicacao = resposta[i];
                     console.log(resposta)
                     // criando e manipulando elementos do HTML via JavaScript
                     var divPublicacao = document.createElement("div");
-                    feed.innerHTML += `Nome: ${publicacao.nome} Pontuação: ${publicacao.max(pontos)}  <br>`
-                    console.log(publicacao.pontos)
+
+                    feed.innerHTML += `${cont}º - Nome: ${publicacao.nome} - Pontuação: ${publicacao.nome} <br>`
+                    
                 }
+
+                console.log(publicacao.pontos)
+
 
             });
         } else {
@@ -224,14 +262,91 @@ function buscarPontos() {
 }
 
 // modal
-  const modal = document.querySelector('.modal-container')
+const modal = document.querySelector('.modal-container')
 
-  function openModal() {
+function openModal() {
     modal.classList.add('active')
-  }
+}
 
-  function closeModal() {
+function closeModal() {
     modal.classList.remove('active')
-  }  
+}
 
 
+// //   graficos
+// function obterDados(fkUsuario, pontos) {
+
+//     if (proximaAtualizacao != undefined) {
+//         clearTimeout(proximaAtualizacao);
+//     }
+
+//     fetch(`/medidas/ultimas/${fkUsuario}`, { cache: 'no-store' }).then(function (response) {
+//         if (response.ok) {
+//             response.json().then(function (resposta) {
+//                 console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+//                 resposta.reverse();
+
+//                 plotarGrafico(resposta, fkUsuario);
+//             });
+//         } else {
+//             console.error('Nenhum dado encontrado ou erro na API');
+//         }
+//     })
+//         .catch(function (error) {
+//             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+//         });
+// }
+
+// function inserirGrafico(resposta, fkUsuario) {
+
+//     console.log('iniciando plotagem do gráfico...');
+
+//     // Criando estrutura para plotar gráfico - labels
+//     let labels = [];
+
+//     // Criando estrutura para plotar gráfico - dados
+//     let dados = {
+//         labels: labels,
+//         datasets: [{
+//             label: 'Umidade',
+//             data: [],
+//             fill: false,
+//             borderColor: 'rgb(253, 44, 44)',
+//             tension: 0.1
+//         },
+//         ]
+//     };
+
+//     console.log('----------------------------------------------')
+//     console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+//     console.log(resposta)
+
+//     // Inserindo valores recebidos em estrutura para plotar o gráfico
+//     for (i = 0; i < resposta.length; i++) {
+//         var registro = resposta[i];
+//         labels.push(registro.momento_grafico);
+//         dados.datasets[0].data.push(registro.umidade);
+//     }
+
+//     console.log('----------------------------------------------')
+//     console.log('O gráfico será plotado com os respectivos valores:')
+//     console.log('Labels:')
+//     console.log(labels)
+//     console.log('Dados:')
+//     console.log(dados.datasets)
+//     console.log('----------------------------------------------')
+
+    // Criando estrutura para plotar gráfico - config
+//     const config = {
+//         type: 'bar',
+//         data: dados,
+//     };
+
+//     // Adicionando gráfico criado em div na tela
+//     let myChart = new Chart(
+//         document.getElementById(`myChartCanvas${fkUsuario}`),
+//         config
+//     );
+
+//     setTimeout(() => atualizarGrafico(fkUsuario, dados, myChart), 2000);
+// }
