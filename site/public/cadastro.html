@@ -19,17 +19,17 @@
                 <h1>Cadastro</h1>
             </div>
             <div class="main">
-                
-                    <span>Nome:</span> <br> <input type="text" placeholder="Antonio" id="nome_input">
-                    <br>
-                    <span>E-mail:</span> <br> <input type="text" placeholder="seu@email.com" id="email_input">
-                    <br>
-                    <span>Senha:</span> <br> <input type="password" placeholder="**********" id="senha_input">
-                    <span>Confirmação de senha:</span> <br> <input type="password" placeholder="**********"
-                        id="confirmacao_senha_input">
-                    <br>
-                    <button onclick="cadastrar()">Cadastrar</button>
-                
+
+                <span>Nome:</span> <br> <input type="text" placeholder="Antonio" id="nome_input">
+                <br>
+                <span>E-mail:</span> <br> <input type="text" placeholder="seu@email.com" id="email_input">
+                <br>
+                <span>Senha:</span> <br> <input type="password" placeholder="**********" id="senha_input">
+                <span>Confirmação de senha:</span> <br> <input type="password" placeholder="**********"
+                    id="confirmacao_senha_input">
+                <br>
+                <button onclick="validar()">Cadastrar</button>
+
             </div>
         </div>
         <div class="img">
@@ -45,6 +45,23 @@
 </html>
 
 <script>
+    function validar() {
+        
+        var nome = nome_input.value;
+        var email = email_input.value;
+        var senha = senha_input.value;
+        var confirmacaoSenha = confirmacao_senha_input.value;
+
+        if (email.includes('@') && email.includes('.') && confirmacaoSenha == senha) {
+            cadastrar()
+        }
+        else {
+            alert('Preencha corretamente os campos.')
+        }
+    }
+</script>
+
+<script>
     function cadastrar() {
         //aguardar();
 
@@ -56,14 +73,14 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-           // cardErro.style.display = "block"
+            // cardErro.style.display = "block"
             alert("Preencha os campos.");
 
             //finalizarAguardar();
             return false;
         }
         else {
-           // setInterval(sumirMensagem, 5000)
+            // setInterval(sumirMensagem, 5000)
         }
 
         // Enviando o valor da nova input
@@ -84,23 +101,23 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-              //  cardErro.style.display = "block";
+                //  cardErro.style.display = "block";
 
-              console.log('aqui')
-              alert('Cadastro realizado com sucesso! Redirecionando para tela de Login...')
+                console.log('aqui')
+                alert('Cadastro realizado com sucesso! Redirecionando para tela de Login...')
 
-              setTimeout(() => {
+                setTimeout(() => {
                     window.location = "login.html";
                 }, "300")
 
-             //   limparFormulario();
-              // finalizarAguardar();
+                //   limparFormulario();
+                // finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-           // finalizarAguardar();
+            // finalizarAguardar();
         });
 
         return false;

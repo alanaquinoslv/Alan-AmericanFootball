@@ -168,6 +168,20 @@ nav a:hover {
 	display: flex;
 }
 
+.secaobr1 {
+	background-color: #00a30e;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+.secaobr2 {
+	background-color:#0120cf; 
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+
 /* secao regras */
 .secaoregras {
 	background: linear-gradient(50deg, white, gray, black);
@@ -372,5 +386,86 @@ nav a:hover {
 	background-size: cover;
 	height: 380px;
 	width: 710px;
+	display: flex;
+}
+
+.img20 {
+	background-image: url(../assets2/players20.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img21 {
+	background-image: url(../assets2/players21.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img22 {
+	background-image: url(../assets2/players22.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img23 {
+	background-image: url(../assets2/players23.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img24 {
+	background-image: url(../assets2/players24.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img25 {
+	background-image: url(../assets2/players25.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img26 {
+	background-image: url(../assets2/players26.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
+	display: flex;
+}
+
+.img27 {
+	background-image: url(../assets2/players27.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 710px;
+	display: flex;
+}
+
+.img28 {
+	background-image: url(../assets2/players28.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 380px;
+	width: 638px;
 	display: flex;
 }

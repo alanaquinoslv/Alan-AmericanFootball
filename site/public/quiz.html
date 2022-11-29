@@ -29,7 +29,7 @@
             <hr />
             <div id="metrica">
                 <div>
-                    <canvas id="myChart"></canvas>
+                    <canvas id="myChartCanvas"></canvas>
                   </div>
             </div>
             <hr />
@@ -41,29 +41,4 @@
 
 </html>
 <script src="./js/quiz.js"></script>
-
-
- <script>
-const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Nome', 'Nome2', 'Nome3', 'Nome4', 'Nome5', 'Nome6'],
-      datasets: [{
-        label: 'Pontuação',
-        data: [50, 20, 0, 10, 20, 30],
-        borderWidth: 1,
-        backgroundColor: 'rgb(253, 44, 44)'
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-  </script>
 
