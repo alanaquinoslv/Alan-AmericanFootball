@@ -23,6 +23,27 @@ body {
     box-shadow: 4px 4px 4px #013369;
 }
 
+/* loading */
+.loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+    border: none;
+    background: none;
+  }
+  
+  .loading-div img {
+    height: 42px;
+    width: 42px;
+    background: none;
+  }
+
+/* login erros */
+#div_erros_login {
+    margin-top: 15px;
+    color: #fff;
+  }
+
 /* box do login */
 .login {
     order: 1;

@@ -16,12 +16,9 @@
 <body>
 
     <header>
-        <a class="logo">
-            <p id="p_usuario" class="logo"></p>
-        </a>
+        <a href="./index2.html" class="logo"> <p id="p_usuario" class="logo"></p> </a>
         <nav>
             <ul id="menu" class="menu">
-                <li><a href="./index2.html">Home</a></li>
                 <li><a href="#">Ligas</a>
                     <ul>
                         <li><a href="https://www.nfl.com/" target="_blank" rel="noopener noreferrer">NFL</a></li>
@@ -47,13 +44,12 @@
                         <li><a href="./draft2.html">Draft</a>
                         </li>
                     </ul>
-                </li>
-                <li><a href="#">Jogar</a>
-                    <ul>
-                        <li><a href="./quiz.html">Quiz</a></li>
-                        <li><a href="./simulador.html">Simulador</a></li>
-                    </ul>
-                </li>
+                    <li><a href="#">Jogar</a>
+                        <ul>
+                            <li><a href="./quiz.html">Quiz</a></li>
+                            <li><a href="./simulador.html">Simulador</a></li>
+                        </ul>
+                    </li>
             </ul>
         </nav>
         <a href="#" onclick="limparSessao()" class="botao">Sair</a>
@@ -239,9 +235,15 @@
                     </h1>
 
                     <p class="textopequeno">
-                        <br> Se imaginássemos que ele funciona como uma entrevista de emprego. Mas não uma qualquer: é uma mistura de concurso de fisiculturismo, entrevista de emprego, teste de inteligência, anti-doping e concurso de Miss (por conta das medidas).
+                        <br> Se imaginássemos que ele funciona como uma entrevista de emprego. Mas não uma qualquer: é
+                        uma mistura de concurso de fisiculturismo, entrevista de emprego, teste de inteligência,
+                        anti-doping e concurso de Miss (por conta das medidas).
 
-                        O Combine serve de maneira “confirmatória” para as análises de uma franquia. Explica-se: os prospectos do Draft são analisados (“scouted”) pelas franquias por meses antes do Draft e do próprio Combine. Assim, o desempenho nos treinamentos de campo no Combine servem como um “segundo exame” para os times avaliarem os jogadores. Se em vídeo, com imagens do College, o jogador se mostrou rápido, seu tiro de 40 jardas servirá para comprovar isso ou não.
+                        O Combine serve de maneira “confirmatória” para as análises de uma franquia. Explica-se: os
+                        prospectos do Draft são analisados (“scouted”) pelas franquias por meses antes do Draft e do
+                        próprio Combine. Assim, o desempenho nos treinamentos de campo no Combine servem como um
+                        “segundo exame” para os times avaliarem os jogadores. Se em vídeo, com imagens do College, o
+                        jogador se mostrou rápido, seu tiro de 40 jardas servirá para comprovar isso ou não.
                     </p>
                 </div>
             </div>
@@ -261,7 +263,8 @@
                     </h1>
 
                     <p class="textopequeno">
-                        <br> O maior jogador da história da NFL com 7 títulos do SuperBowl, Tom Brady, foi uma escolha compensatória de draft em 2000.
+                        <br> O maior jogador da história da NFL com 7 títulos do SuperBowl, Tom Brady, foi uma escolha
+                        compensatória de draft em 2000.
                     </p>
                 </div>
             </div>
@@ -282,12 +285,14 @@
             </div>
         </section>
 
-
+        <button id="btnTop" onclick="voltarAoTopo()"><img src="./assets2/up-arrow.png" alt="voltarAoTopo"></button>
 
         <!-- video -->
         <video src="../public/assets2/NFL_Draft.mp4" width="100%" height="520px" controls loop preload="auto"
             poster="../public/assets2/poster3.jpg"></video>
 
-            <script>
-                p_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-            </script>
+        <script>
+            p_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        </script>
+
+        <script src="./js/backTop.js"></script>

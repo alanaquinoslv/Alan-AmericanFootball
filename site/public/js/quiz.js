@@ -360,6 +360,7 @@ function plotarGrafico(resposta, fkUsuario) {
         var registro = resposta[i];
         dados.datasets[0].data.push(registro.pontos);
         labels.push(registro.nome);
+
     }
 
     const config = {

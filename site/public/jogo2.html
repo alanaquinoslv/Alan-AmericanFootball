@@ -16,10 +16,9 @@
 <body>
 
     <header>
-        <a class="logo"> <p id="p_usuario" class="logo"></p> </a>
+        <a href="./index2.html" class="logo"> <p id="p_usuario" class="logo"></p> </a>
         <nav>
             <ul id="menu" class="menu">
-                <li><a href="./index2.html">Home</a></li>
                 <li><a href="#">Ligas</a>
                     <ul>
                         <li><a href="https://www.nfl.com/" target="_blank" rel="noopener noreferrer">NFL</a></li>
@@ -794,6 +793,8 @@
         <!-- imagem -->
         <div class="img33"></div>
 
+        <button id="btnTop" onclick="voltarAoTopo()"><img src="./assets2/up-arrow.png" alt="voltarAoTopo"></button>
+
     </div>
 </body>
 
@@ -802,3 +803,5 @@
 <script>
     p_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 </script>
+
+<script src="./js/backTop.js"></script>

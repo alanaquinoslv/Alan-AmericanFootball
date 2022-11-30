@@ -12,8 +12,8 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
-  text-shadow: 0 0 10px gray;
+  color: #fff;
+  text-shadow: 0 0 10px #ccc;
   text-transform: uppercase;
 }
 
@@ -30,8 +30,9 @@ header {
 }
 
 .logo {
+  color: #fff;
   text-transform: uppercase;
-  text-shadow: 0 0 10px gray;
+  text-shadow: 0 0 10px #ccc;
   font-size: 2rem;
   letter-spacing: 3px;
   transition: color .3s ease;
@@ -39,7 +40,7 @@ header {
 
 .logo:hover {
   color: #d50a0a;
-  text-shadow: 0 0 10px black;
+  text-shadow: 0 0 10px #000;
 }
 
 /* navbar */
@@ -79,7 +80,7 @@ nav a:hover {
   text-transform: left;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 #menu li:hover > a {
@@ -109,7 +110,7 @@ nav a:hover {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url(../assets2/wp2389351-american-football-wallpapers.jpg);
+  background: url(../assets2/index2.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -120,27 +121,27 @@ nav a:hover {
 }
 
 .banner .container h4 {
-  color: black;
+  color: #fff;
   letter-spacing: 5px;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 300;
-  text-shadow: 0 0 10px black;
+  text-shadow: 0 0 10px #000;
 }
 
 .banner .container h1 {
   font-size: 50px;
   font-weight: 400;
-  color: black;
+  color: #fff;
   text-transform: capitalize;
   margin: 10px 0 32px 0;
   letter-spacing: 3px;
-  text-shadow: 0 0 10px gray;
+  text-shadow: 0 0 10px #000;
 }
 
 /* formatacao botao */
 .botao {
-  color: white;
+  color: #fff;
   padding: 15px 30px;
   border-radius: 5px;
   background: #d50a0a;
