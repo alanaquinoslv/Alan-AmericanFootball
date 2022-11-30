@@ -14,7 +14,3 @@ O futebol americano é extremamente popular nos Estados Unidos. Nos anos 90, ult
 
 
 **Back-end:** <img align="center" alt="Alan-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> <img align="center" alt="Alan-NodeJS" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-plain.svg">
-
-## Autor
-
-[@alanaquinoslv](https://github.com/alanaquinoslv)
