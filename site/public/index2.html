@@ -52,24 +52,120 @@
             </ul>
         </nav>
         <a href="#" onclick="limparSessao()" class="botao">Sair</a>
-       
+
     </header>
     <section class="banner">
         <div class="container">
-            <h4>Conheça o esporte que cresce cada vez mais</h4>
+            <h4 id="frase">Conheça o esporte que cresce cada vez mais</h4>
             <h1>American Football</h1>
             <!-- <a href="https://github.com/alanaquinoslv" target="_blank" rel="noopener noreferrer">
                 <h6>Desenvolvido por Alan Aquino | SPTECH</h6>
             </a> -->
+            <button onclick="openModal()" id="btnMensagem"><img src="./assets2/messenger.png" alt="mensagem"></button>
+
+            <div class="modal-container" id="containerModal">
+                <div class="modal">
+                    <div class="btns">
+                        <button class="btnClose" onclick="closeModal()">X</button>
+                    </div>
+                    <h3>Envie seu comentário, crítica ou sugestão:</h3>
+                    <hr />
+                    <div>
+                        <div>
+                            <textarea name="" id="mensagem" cols="30" rows="10"> </textarea>
+                            <br>
+                            <button id="enviarMsg" onclick="validar()">Enviar</button>
+                        </div>
+                    </div>
+                    <hr />
+
+                </div>
+            </div>
         </div>
 
-    </section>
 
-    
+    </section>
 
 </body>
 
 </html>
 <script>
-     p_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    p_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    // modal
+    const modal = document.querySelector('.modal-container')
+
+    function openModal() {
+        modal.classList.add('active')
+    }
+
+    function closeModal() {
+        modal.classList.remove('active')
+    }
+</script>
+
+<!-- registrar comentario -->
+<script>
+    var fkUsuario = sessionStorage.ID_USUARIO;
+
+    var comentario = []
+
+
+
+    function validar() {
+
+
+        var cont = 0
+
+        while (cont < 1) {
+            comentario.push(mensagem.value)
+            registrarComentario(comentario)
+            cont++
+        }
+
+        if (cont == 1) {
+            btnMensagem.style.display = 'none'
+            containerModal.style.display = 'none'
+            frase.style.margin = '0px'
+        }
+
+    }
+
+    function registrarComentario(comentario) {
+
+
+
+        // var comentario = comentario.value
+        mensagem.value = ''
+        console.log(comentario)
+
+        setTimeout(() => alert('Comentário enviado com sucesso!'), 100);
+
+
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/registrarComentario", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                comentarioServer: comentario,
+                fkUsuarioServer: fkUsuario
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+
 </script>

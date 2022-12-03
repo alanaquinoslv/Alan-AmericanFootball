@@ -161,9 +161,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
     submitButton.onclick = function () {
         showResults(questions, quizContainer, resultsContainer);
 
-        var comentario = window.prompt('Antes de mostrar o resultado, o que você achou do esporte?')
-        console.log(comentario)
-        registrarComentario(comentario)
+        // var comentario = window.prompt('Antes de mostrar o resultado, o que você achou do esporte?')
+        // console.log(comentario)
+        // registrarComentario(comentario)
     }
 }
 
@@ -195,31 +195,31 @@ function registrarPontos(pontos) {
     return false;
 }
 
-function registrarComentario(comentario) {
+// function registrarComentario(comentario) {
 
-    // Enviando o valor da nova input
-    fetch("/usuarios/registrarComentario", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
-            comentarioServer: comentario,
-            fkUsuarioServer: fkUsuario
-        })
-    }).then(function (resposta) {
+//     // Enviando o valor da nova input
+//     fetch("/usuarios/registrarComentario", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             // crie um atributo que recebe o valor recuperado aqui
+//             // Agora vá para o arquivo routes/usuario.js
+//             comentarioServer: comentario,
+//             fkUsuarioServer: fkUsuario
+//         })
+//     }).then(function (resposta) {
 
-        console.log("resposta: ", resposta);
+//         console.log("resposta: ", resposta);
 
-    }).catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-    });
+//     }).catch(function (resposta) {
+//         console.log(`#ERRO: ${resposta}`);
+//         // finalizarAguardar();
+//     });
 
-    return false;
-}
+//     return false;
+// }
 
 // function buscarPontos() {
 //     //aguardar();

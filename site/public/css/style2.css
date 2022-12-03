@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* esconde conteudo grande */
   overflow: hidden;
 }
@@ -60,7 +60,8 @@ nav a:hover {
 }
 
 /* menus navbar */
-#menu:before, #menu:after {
+#menu:before,
+#menu:after {
   content: '';
   display: table;
 }
@@ -83,7 +84,7 @@ nav a:hover {
   color: #fff;
 }
 
-#menu li:hover > a {
+#menu li:hover>a {
   color: #d50a0a;
 }
 
@@ -98,12 +99,140 @@ nav a:hover {
   transition: all .3s ease-in-out;
 }
 
-#menu li:hover > ul {
+#menu li:hover>ul {
   opacity: 1;
   visibility: visible;
   margin: 0;
 }
 
+
+/* botao mensagem */
+#btnMensagem {
+  margin: 120px 0 10px 1200px; 
+  height: 75px;
+  width: 75px;
+  background: #fff;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 20px 20px 50px 15px #000;
+}
+
+#btnMensagem img {
+  width: 50px;
+}
+
+#btnMensagem:hover {
+  transform: scale(1.10);
+}
+
+/* modal */
+hr {
+  border: 0px;
+  border-top: 1px solid rgb(255, 0, 0);
+  margin: 20px;
+}
+
+.modal-container {
+  width: 1000px;
+  position: fixed;
+  left: 400px;
+  top: 120px;
+  z-index: 999;
+  justify-content: center;
+  text-align: center;
+  display: none;
+  opacity: .9;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  width: 50%;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal 4.s;
+}
+
+@keyframes modal {
+  from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+span {
+  margin: 10px auto;
+}
+
+.btns {
+  font-size: medium;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btns button {
+  font-size: medium;
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 400px;
+  border-radius: 30px;
+  height: 80%;
+  width: 10%;
+}
+
+.btnClose {
+  background-color: #ff0505 !important;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  .modal {
+      padding: 10px;
+      width: 80%;
+  }
+
+  span,
+  .btns button {
+      font-size: smaller;
+  }
+}
+
+/* comentario */
+textarea {
+  width: 400px;
+  height: 150px;
+}
+
+#enviarMsg {
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 4px;
+  background: #d50a0a;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+}
 
 /* conteudo tela */
 .banner {
@@ -127,6 +256,7 @@ nav a:hover {
   font-size: 20px;
   font-weight: 300;
   text-shadow: 0 0 10px #000;
+  margin-top: 200px;
 }
 
 .banner .container h1 {
