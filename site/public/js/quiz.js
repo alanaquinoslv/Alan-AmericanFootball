@@ -71,7 +71,7 @@ var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 var rankingButton = document.getElementById('ranking');
 
-// gerando função
+// função gerar quiz
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {

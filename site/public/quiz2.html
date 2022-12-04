@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>QuizBall</h1>
+
+    1. Quantos pontos vale o touchdown? <br>
+    <input type="radio" name="questao1" id="correta1">6pts <br>
+    <input type="radio" name="questao1">3pts <br>
+    <input type="radio" name="questao1">4pts <br>
+    <input type="radio" name="questao1">7pts <br>
+    <br>
+    2. Nome do jogador que lança a bola: <br>
+    <input type="radio" name="questao2">FullBack <br>
+    <input type="radio" name="questao2">LineBacker <br>
+    <input type="radio" name="questao2">Center <br>
+    <input type="radio" name="questao2" id="correta2">QuarterBack <br>
+    <br>
+    3. Formação defensiva que faz analogia a guerra: <br>
+    <input type="radio" name="questao3">Mike <br>
+    <input type="radio" name="questao3">Shotgun <br>
+    <input type="radio" name="questao3" id="correta3">Blitz <br>
+    <input type="radio" name="questao3">Sneak <br>
+
+    <button onclick="resultado()">Ver resultado</button>
+
+</body>
+</html>
+
+<script>
+    function resultado() {
+        var pontos = 0
+        var acertos = 0
+
+        if (document.getElementById('correta1').checked) {
+            pontos +=10
+            acertos++
+        }
+        if (document.getElementById('correta2').checked) {
+            pontos +=10
+            acertos++
+        }
+        if (document.getElementById('correta2').checked) {
+            pontos +=10
+            acertos++
+        }
+        alert(`Você acertou ${acertos} de 3 e fez ${pontos} pontos`)
+        
+    }
+</script>
