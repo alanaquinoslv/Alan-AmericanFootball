@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Graduate', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* esconde conteudo grande */
   overflow: hidden;
 }
@@ -32,7 +34,7 @@ header {
 .logo {
   color: #fff;
   text-transform: uppercase;
-  text-shadow: 0 0 10px #ccc;
+  text-shadow: 0 0 10px gray;
   font-size: 2rem;
   letter-spacing: 3px;
   transition: color .3s ease;
@@ -76,10 +78,10 @@ nav a:hover {
 }
 
 #menu a {
-  padding: 7px 9px;
+  padding: 6px 8px;
   float: left;
   text-transform: left;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Graduate', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
   color: #fff;
 }

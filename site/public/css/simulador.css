@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +9,8 @@
 body {
     height: 97vh;
     width: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Graduate', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    font-family: sans-serif;
     color: rgb(0, 0, 0);
     background: url(../assets2/campo.jpg);
     background-position: center;
@@ -42,7 +43,6 @@ body {
 
 .text h1 {
     font-size: 30px;
-    margin-left: 0px;
     text-shadow: 0 0 10px #000000;
 }
 
@@ -63,8 +63,7 @@ input:hover {
 
 
 .span_seta {
-    margin-left: 0px;
-    padding: 50px;
+    padding: 30px;
     font-size: 40px;
     color: #ffffff;
     text-decoration: none;

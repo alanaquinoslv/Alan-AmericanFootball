@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../public/assets2/rugby-ball.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./css/quizBall.css">
+    <title>QuizBall</title>
+</head>
+
+<body>
+    <header>
+
+        <h1> <a href="./index2.html" class="span_seta">&larr;</a> QuizBall</h1>
+        <!-- <p>Teste seus conhecimentos de futebol americano!</p> -->
+    </header>
+
+    <div class="container">
+
+        <div class="card" id="card1" style="display: block">
+
+            <section id="q0">
+                <h3>1 - Quantos pontos vale o touchdown?</h3>
+                <br><br>
+                <label>
+                    <input type="radio" value="1" name="q0" onclick="resposta(0, this)"> 6 pontos
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="2" name="q0" onclick="resposta(0, this)"> 3 pontos
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="3" name="q0" onclick="resposta(0, this)"> 7 pontos
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="4" name="q0" onclick="resposta(0, this)"> 5 pontos
+                </label>
+                <br><br><br>
+                <button onclick="proxima()">Avançar</button>
+            </section>
+
+        </div>
+
+        <div class="card" id="card2" style="display: none">
+
+            <section id="q1">
+                <h3>2 - Qual o nome do jogador que lança a bola?</h3>
+                <br><br>
+                <label>
+                    <input type="radio" value="1" name="q1" onclick="resposta(1, this)"> FullBack
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="2" name="q1" onclick="resposta(1, this)"> QuarterBack
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="3" name="q1" onclick="resposta(1, this)"> Center
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="4" name="q1" onclick="resposta(1, this)"> LineBacker
+                </label>
+                <br><br><br>
+                <button onclick="proxima()">Avançar</button>
+            </section>
+
+        </div>
+
+        <div class="card" id="card3" style="display: none">
+
+            <section id="q2">
+                <h3>3 - Formação defensiva que faz analogia à guerra:</h3>
+                <br><br>
+                <label>
+                    <input type="radio" value="1" name="q2" onclick="resposta(2, this)"> Sneak
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="2" name="q2" onclick="resposta(2, this)"> Blitz
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="3" name="q2" onclick="resposta(2, this)"> Mike
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="4" name="q2" onclick="resposta(2, this)"> ShotGun
+                </label>
+                <br><br><br>
+                <button onclick="proxima()">Avançar</button>
+            </section>
+
+        </div>
+
+        <div class="card" id="card4" style="display: none">
+            <section id="q3">
+                <h3>4 - O que é o punt?</h3>
+                <br><br>
+                <label>
+                    <input type="radio" value="1" name="q3" onclick="resposta(3, this)"> Perda da bola
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="2" name="q3" onclick="resposta(3, this)"> Roubo da bola
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="3" name="q3" onclick="resposta(3, this)"> "Gol contra"
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="4" name="q3" onclick="resposta(3, this)"> Recuo
+                </label>
+                <br><br><br><br>
+                <button onclick="proxima()">Avançar</button>
+            </section>
+
+        </div>
+
+        <div class="card" id="card5" style="display: none">
+
+            <section id="q4">
+                <h3>5 - Qual brasileiro jogou uma partida de temporada regular na NFL?</h3>
+                <br><br>
+                <label>
+                    <input type="radio" value="1" name="q4" onclick="resposta(4, this)"> Maikon Bonani
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="2" name="q4" onclick="resposta(4, this)"> Breno Giacomini
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="3" name="q4" onclick="resposta(4, this)"> Cairo Santos
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" value="4" name="q4" onclick="resposta(4, this)"> Durval Queiroz
+                </label>
+                <br><br>
+                <button onclick="corrigir()">Ver resultado</button>
+            </section>
+
+        </div>
+
+        <div class="card" id="cardResultado" style="display: none">
+            <div class="resultado">
+                <h2><span id="resultado"></span></h2>
+                <br><br><br><br>
+                <button onclick="grafico()">Ver Ranking</button>
+            </div>
+        </div>
+
+        <div class="card" id="cardRanking" style="display: none">
+            <div class="resultado">
+                <h2>Ranking<span id="ranking"></span></h2>
+                <br>
+                <div id="metrica">
+                    <div class="ranking">
+                        <canvas id="myChartCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
+
+<script src="./js/quizBall.js"></script>

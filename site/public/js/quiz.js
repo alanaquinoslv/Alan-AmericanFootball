@@ -195,75 +195,75 @@ function registrarPontos(pontos) {
     return false;
 }
 
-// function registrarComentario(comentario) {
+function registrarComentario(comentario) {
 
-//     // Enviando o valor da nova input
-//     fetch("/usuarios/registrarComentario", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify({
-//             // crie um atributo que recebe o valor recuperado aqui
-//             // Agora vá para o arquivo routes/usuario.js
-//             comentarioServer: comentario,
-//             fkUsuarioServer: fkUsuario
-//         })
-//     }).then(function (resposta) {
+    // Enviando o valor da nova input
+    fetch("/usuarios/registrarComentario", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            comentarioServer: comentario,
+            fkUsuarioServer: fkUsuario
+        })
+    }).then(function (resposta) {
 
-//         console.log("resposta: ", resposta);
+        console.log("resposta: ", resposta);
 
-//     }).catch(function (resposta) {
-//         console.log(`#ERRO: ${resposta}`);
-//         // finalizarAguardar();
-//     });
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+    });
 
-//     return false;
-// }
+    return false;
+}
 
-// function buscarPontos() {
-//     //aguardar();
-//     fetch(`/avisos/buscarPontos/${fkUsuario}`).then(function (resposta) {
-//         if (resposta.ok) {
-//             if (resposta.status == 204) {
-//                 var feed = document.getElementById("metrica");
-//                 var mensagem = document.createElement("span");
-//                 mensagem.innerHTML = "Nenhum resultado encontrado."
-//                 feed.appendChild(mensagem);
-//                 throw "Nenhum resultado encontrado!!";
-//             }
+function buscarPontos() {
+    //aguardar();
+    fetch(`/avisos/buscarPontos/${fkUsuario}`).then(function (resposta) {
+        if (resposta.ok) {
+            if (resposta.status == 204) {
+                var feed = document.getElementById("metrica");
+                var mensagem = document.createElement("span");
+                mensagem.innerHTML = "Nenhum resultado encontrado."
+                feed.appendChild(mensagem);
+                throw "Nenhum resultado encontrado!!";
+            }
 
-//             resposta.json().then(function (resposta) {
-//                 console.log("Dados recebidos: ", JSON.stringify(resposta));
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
 
-//                 var feed = document.getElementById("metrica");
-//                 feed.innerHTML = ''
-//                 var titulo = ''
+                var feed = document.getElementById("metrica");
+                feed.innerHTML = ''
+                var titulo = ''
 
-//                 var cont = 0
+                var cont = 0
 
-//                 for (let i = 0; i < resposta.length; i++) {
-//                     cont++
-//                     var publicacao = resposta[i];
-//                     console.log(resposta)
-//                     // criando e manipulando elementos do HTML via JavaScript
-//                     var divPublicacao = document.createElement("div");
+                for (let i = 0; i < resposta.length; i++) {
+                    cont++
+                    var publicacao = resposta[i];
+                    console.log(resposta)
+                    // criando e manipulando elementos do HTML via JavaScript
+                    var divPublicacao = document.createElement("div");
 
-//                     feed.innerHTML += `${cont}º - Nome: ${publicacao.nome} - Pontuação: ${publicacao.pontos} <br>`
+                    feed.innerHTML += `${cont}º - Nome: ${publicacao.nome} - Pontuação: ${publicacao.pontos} <br>`
 
-//                 }
+                }
 
-//                 console.log(publicacao.pontos)
+                console.log(publicacao.pontos)
 
 
-//             });
-//         } else {
-//             throw ('Houve um erro na API!');
-//         }
-//     }).catch(function (resposta) {
-//         console.error(resposta);
-//     });
-// }
+            });
+        } else {
+            throw ('Houve um erro na API!');
+        }
+    }).catch(function (resposta) {
+        console.error(resposta);
+    });
+}
 
 // modal
 const modal = document.querySelector('.modal-container')

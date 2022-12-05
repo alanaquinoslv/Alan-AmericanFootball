@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 93vh;
+    width: 100%;
+    font-family: 'Graduate', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #000;
+    background: url(../assets2/quiz.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    text-align: center;
+    margin: 30px 0 0 25px;
+    text-shadow: 0 0 10px rgb(94, 91, 91);
+}
+
+.span_seta {
+    margin: 0 100px 100px 0px;
+    font-size: 40px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+h1 {
+    color: #fff;
+    margin-right: 115px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 35px;
+    margin: 40px;
+    width: 35vw;
+    height: 30vw;
+    transition: all 0.3s ease-out;
+    background-color: #fff;
+    text-align: center;
+    opacity: .9;
+    border-top: 3px solid #ff0505;
+    border-bottom: 3px solid #ff0505;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+  }
+
+label {
+    cursor: pointer;
+    color: #ff0505;
+}
+
+button {
+    font-size: 16px;
+    background-color: #ff0505;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 7px;
+    cursor: pointer;
+    transition: opacity .4s ease;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+.ranking {
+    height: 16vw;
+}

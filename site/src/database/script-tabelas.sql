@@ -31,14 +31,25 @@ foreign key (fkUsuario) references usuario (id),
 comentario varchar (200)
 );
 
+-- pre apresentacao
+insert into usuario values
+(null, 'Alan', 'alan@gmail.com', '1234'),
+(null, 'Diego', 'diego@gmail.com', '1234'),
+(null, 'Sara', 'sara@gmail.com', '1234');
 
-select nome, max(pontos) as 'Pontuação max' from quiz join usuario on id = fkUsuario group by nome limit 5;
-select nome, pontos from quiz join usuario on id = fkUsuario where id = 3
-select nome, max(pontos) as pontos from quiz join usuario on id = fkUsuario group by pontos limit 5;
+insert into quiz values 
+(null, 1, 3, 50),
+(null, 2, 2, 30),
+(null, 3, 4, 20);
 
 
+-- select nome, max(pontos) as 'Pontuação max' from quiz join usuario on id = fkUsuario group by nome limit 5;
+-- select nome, pontos from quiz join usuario on id = fkUsuario where id = 3
+-- select nome, max(pontos) as pontos from quiz join usuario on id = fkUsuario group by pontos limit 5;
 
- select u.nome, q.pontos from usuario u join quiz q on fkUsuario = id group by u.nome
-order by q.pontos desc limit 5;
+-- select da listagem/grafico
+select u.nome, q.pontos from usuario u join quiz q on fkUsuario = id order by q.pontos desc limit 10;
 
-select u.nome, q.pontos from usuario u join quiz q on fkUsuario = id order by q.pontos desc limit 5;
+-- selects
+select count(comentario) as 'quantidade de comentários', usuario.nome 
+from comentario join usuario on fkUsuario = id where fkUsuario = 1;
